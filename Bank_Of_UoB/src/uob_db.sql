@@ -1,0 +1,25 @@
+CREATE DATABASE IF NOT EXISTS uob_bank;
+USE uob_bank;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    account_no VARCHAR(50) UNIQUE NOT NULL,
+    username VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    phone VARCHAR(50),
+    address TEXT,
+    password VARCHAR(255) NOT NULL,
+    balance DECIMAL(15,2) NOT NULL DEFAULT 1000.00,
+    branch VARCHAR(100) DEFAULT 'datiara',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tx_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    tx_type ENUM('DEPOSIT','WITHDRAW','TRANSFER') NOT NULL,
+    from_account VARCHAR(50),
+    to_account VARCHAR(50),
+    amount DECIMAL(15,2) NOT NULL,
+    description VARCHAR(255)
+);
