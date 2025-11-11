@@ -1,4 +1,3 @@
-// BalanceFrame.java
 import javax.swing.*;
 import java.awt.*;
 

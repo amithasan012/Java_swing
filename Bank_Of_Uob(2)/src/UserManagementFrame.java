@@ -88,7 +88,7 @@ public class UserManagementFrame extends JFrame {
                 
                 tableModel.addRow(new Object[]{
                     accountNo, username, email, phone, 
-                    "₹" + balance, branch
+                    "$" + balance, branch
                 });
             }
             
