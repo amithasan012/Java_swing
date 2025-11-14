@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class WelcomePage extends JFrame {
+    private JButton btnLogout;
     public WelcomePage(String username) {
         setTitle("Welcome Page");
         setSize(400, 250);
@@ -19,11 +20,24 @@ public class WelcomePage extends JFrame {
         add(lblUser, BorderLayout.CENTER);
 
         JPanel footer = new JPanel();
+        JPanel btnPanel = new JPanel();
+        btnLogout = new JButton("Logout");
+        btnLogout.setBackground(new Color(204, 0, 0));
+        btnLogout.setForeground(Color.WHITE);
+        btnLogout.setFocusPainted(false);
+        btnPanel.add(btnLogout);
+        footer.add(btnPanel);
+
         JLabel lblFooter = new JLabel("You are successfully logged in!", SwingConstants.CENTER);
         lblFooter.setFont(new Font("Arial", Font.ITALIC, 14));
         lblFooter.setForeground(Color.DARK_GRAY);
         footer.add(lblFooter);
         add(footer, BorderLayout.SOUTH);
+        
+        btnLogout.addActionListener(e -> {
+            new LoginForm();
+            dispose();
+        });
 
         getContentPane().setBackground(new Color(245, 247, 250));
 
