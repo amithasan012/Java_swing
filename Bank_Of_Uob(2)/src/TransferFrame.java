@@ -29,7 +29,7 @@ public class TransferFrame extends JFrame {
         
         JPanel infoPanel = new JPanel(new GridLayout(1, 1, 5, 5));
         infoPanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
-        infoPanel.add(new JLabel("Your Current Balance: ₹" + currentUser.getBalance()));
+        infoPanel.add(new JLabel("Your Current Balance: $" + currentUser.getBalance()));
         mainPanel.add(infoPanel, BorderLayout.CENTER);
         
         JPanel formPanel = new JPanel(new GridLayout(3, 2, 10, 10));

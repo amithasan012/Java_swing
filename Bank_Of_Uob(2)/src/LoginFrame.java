@@ -21,21 +21,25 @@ public class LoginFrame extends JFrame {
     private void initComponents() {
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        mainPanel.setBackground(new Color(20,27,50)); // Light cyan background
         
         // Title
         JLabel titleLabel = new JLabel("Bank of UOB - Datiara Branch", JLabel.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
-        titleLabel.setForeground(new Color(0, 0, 139)); // Dark blue
+        titleLabel.setForeground(new Color(255,255,255)); // Dark blue
         mainPanel.add(titleLabel, BorderLayout.NORTH);
         
         // Form panel
         JPanel formPanel = new JPanel(new GridLayout(3, 2, 10, 10));
         formPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
+        formPanel.setBackground(new Color(20,27,50)); // Match main panel background
         
         JLabel usernameLabel = new JLabel("Username/Email:");
+        usernameLabel.setForeground(new Color(255,255,255)); // Dark blue
         usernameField = new JTextField();
         
         JLabel passwordLabel = new JLabel("Password:");
+        passwordLabel.setForeground(new Color(255,255,255)); // Dark blue
         passwordField = new JPasswordField();
         
         formPanel.add(usernameLabel);
@@ -45,6 +49,7 @@ public class LoginFrame extends JFrame {
         
         // Buttons panel
         JPanel buttonPanel = new JPanel(new FlowLayout());
+        buttonPanel.setBackground(new Color(20,27,50)); // Match main panel background
         loginButton = new JButton("Login");
         registerButton = new JButton("Register");
         
@@ -65,7 +70,10 @@ public class LoginFrame extends JFrame {
         
         // Event listeners
         loginButton.addActionListener(new LoginListener());
-        registerButton.addActionListener(e -> openRegistration());
+        registerButton.addActionListener(e ->{
+            openRegistration();
+            dispose();
+        } );
         
         // Enter key listener for login
         passwordField.addActionListener(new LoginListener());

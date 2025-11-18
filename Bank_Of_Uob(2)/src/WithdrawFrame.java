@@ -68,8 +68,8 @@ public class WithdrawFrame extends JFrame {
             
             if (newBalance < 1000) {
                 JOptionPane.showMessageDialog(this, 
-                    "Insufficient balance! Minimum balance must be ₹1000\n" +
-                    "Maximum you can withdraw: ₹" + (currentBalance - 1000),
+                    "Insufficient balance! Minimum balance must be $1000\n" +
+                    "Maximum you can withdraw: $" + (currentBalance - 1000),
                     "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }

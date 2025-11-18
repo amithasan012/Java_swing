@@ -21,38 +21,59 @@ public class RegistrationFrame extends JFrame {
     private void initComponents() {
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        mainPanel.setBackground(new Color(20,27,50));
         
         // Title
         JLabel titleLabel = new JLabel("Create New Account - Bank of UOB", JLabel.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
-        titleLabel.setForeground(new Color(0, 0, 139));
+        titleLabel.setForeground(new Color(255,255,255));
         mainPanel.add(titleLabel, BorderLayout.NORTH);
         
         // Form panel
         JPanel formPanel = new JPanel(new GridLayout(6, 2, 10, 10));
         formPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
-        
-        formPanel.add(new JLabel("Username:"));
+        formPanel.setBackground(new Color(20,27,50));
+
+        JLabel usernameLabel = new JLabel("Username:");
+        usernameLabel.setForeground(new Color(255,255,255));
+        formPanel.add(usernameLabel);
+        //formPanel.add(new JLabel("Username:"));
+
         usernameField = new JTextField();
         formPanel.add(usernameField);
         
-        formPanel.add(new JLabel("Email:"));
+        //formPanel.add(new JLabel("Email:"));
+        JLabel emailLabel = new JLabel("Email:");
+        emailLabel.setForeground(new Color(255,255,255));
+        formPanel.add(emailLabel);
         emailField = new JTextField();
         formPanel.add(emailField);
         
-        formPanel.add(new JLabel("Phone:"));
+        //formPanel.add(new JLabel("Phone:"));
+        JLabel phoneLabel = new JLabel("Phone:");
+        phoneLabel.setForeground(new Color(255,255,255));
+        formPanel.add(phoneLabel);
         phoneField = new JTextField();
         formPanel.add(phoneField);
         
-        formPanel.add(new JLabel("Address:"));
+        //formPanel.add(new JLabel("Address:"));
+        JLabel addressLabel = new JLabel("Address:");
+        addressLabel.setForeground(new Color(255,255,255));
+        formPanel.add(addressLabel);
         addressField = new JTextField();
         formPanel.add(addressField);
         
-        formPanel.add(new JLabel("Password:"));
+        //formPanel.add(new JLabel("Password:"));
+        JLabel passwordLabel = new JLabel("Password:");
+        passwordLabel.setForeground(new Color(255,255,255));
+        formPanel.add(passwordLabel);
         passwordField = new JPasswordField();
         formPanel.add(passwordField);
         
-        formPanel.add(new JLabel("Confirm Password:"));
+        //formPanel.add(new JLabel("Confirm Password:"));
+        JLabel confirmPasswordLabel = new JLabel("Confirm Password:");
+        confirmPasswordLabel.setForeground(new Color(255,255,255));
+        formPanel.add(confirmPasswordLabel);
         confirmPasswordField = new JPasswordField();
         formPanel.add(confirmPasswordField);
         
@@ -60,6 +81,7 @@ public class RegistrationFrame extends JFrame {
         
         // Buttons panel
         JPanel buttonPanel = new JPanel(new FlowLayout());
+        buttonPanel.setBackground(new Color(20,27,50));
         registerButton = new JButton("Register");
         backButton = new JButton("Back to Login");
         
@@ -77,7 +99,11 @@ public class RegistrationFrame extends JFrame {
         
         // Event listeners
         registerButton.addActionListener(new RegisterListener());
-        backButton.addActionListener(e -> dispose());
+        backButton.addActionListener(e ->{
+            new LoginFrame().setVisible(true);
+            dispose();
+
+        } );
     }
     
     private class RegisterListener implements ActionListener {
