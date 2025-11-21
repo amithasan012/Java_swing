@@ -29,8 +29,8 @@ public class WithdrawFrame extends JFrame {
         
         JPanel infoPanel = new JPanel(new GridLayout(2, 1, 5, 5));
         infoPanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
-        infoPanel.add(new JLabel("Current Balance: ₹" + currentUser.getBalance()));
-        infoPanel.add(new JLabel("Minimum Balance: ₹1000.00"));
+        infoPanel.add(new JLabel("Current Balance: $" + currentUser.getBalance()));
+        infoPanel.add(new JLabel("Minimum Balance: $1000.00"));
         mainPanel.add(infoPanel, BorderLayout.CENTER);
         
         JPanel formPanel = new JPanel(new GridLayout(2, 2, 10, 10));
@@ -80,7 +80,7 @@ public class WithdrawFrame extends JFrame {
                 currentUser.setBalance(newBalance);
                 JOptionPane.showMessageDialog(this, 
                     "Withdrawal successful!\nAmount: ₹" + amount + 
-                    "\nNew Balance: ₹" + newBalance, 
+                    "\nNew Balance: $" + newBalance, 
                     "Success", JOptionPane.INFORMATION_MESSAGE);
                 dispose();
             } else {

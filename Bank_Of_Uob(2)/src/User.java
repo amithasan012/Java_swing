@@ -9,7 +9,7 @@ public class User {
     private double balance;
     private String branch;
     
-    public User() {}
+    //public User() {}
     
     public User(String accountNo, String username, String email, String phone, 
                 String address, String password, double balance, String branch) {
