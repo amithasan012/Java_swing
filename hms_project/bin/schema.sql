@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS hms;
-USE hms;
+CREATE DATABASE IF NOT EXISTS hospitaldb;
+USE hospitaldb;
 
 -- USERS TABLE
 CREATE TABLE IF NOT EXISTS users (
@@ -29,7 +29,6 @@ CREATE TABLE IF NOT EXISTS doctors (
     department VARCHAR(100),
     fee DOUBLE,
     phone VARCHAR(50),
-    number VARCHAR(20),
     available_time VARCHAR(100)
 );
 
@@ -38,8 +37,6 @@ CREATE TABLE IF NOT EXISTS doctors (
 CREATE TABLE IF NOT EXISTS appointments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100),
-    patient VARCHAR(50),
-    doctor VARCHAR(50),
     doctor_id INT,
     date VARCHAR(50),
     time VARCHAR(50),
