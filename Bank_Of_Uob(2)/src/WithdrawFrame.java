@@ -79,7 +79,7 @@ public class WithdrawFrame extends JFrame {
                 
                 currentUser.setBalance(newBalance);
                 JOptionPane.showMessageDialog(this, 
-                    "Withdrawal successful!\nAmount: ₹" + amount + 
+                    "Withdrawal successful!\nAmount: $" + amount + 
                     "\nNew Balance: $" + newBalance, 
                     "Success", JOptionPane.INFORMATION_MESSAGE);
                 dispose();

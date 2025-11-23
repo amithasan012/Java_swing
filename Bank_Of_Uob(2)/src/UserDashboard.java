@@ -28,9 +28,11 @@ public class UserDashboard extends JFrame {
         welcomeLabel.setForeground(new Color(0, 0, 139));
         welcomePanel.add(welcomeLabel);
         mainPanel.add(welcomePanel, BorderLayout.NORTH);
+        //mainPanel.setBackground(new Color(20,27,50));
         
         // Dashboard buttons panel
         JPanel dashboardPanel = new JPanel(new GridLayout(3, 3, 15, 15));
+        dashboardPanel.setBackground(new Color(20,27,50));
         dashboardPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         
         String[] buttons = {
@@ -51,8 +53,8 @@ public class UserDashboard extends JFrame {
         }
         
         // Add empty panels for grid alignment
-        dashboardPanel.add(new JPanel());
-        dashboardPanel.add(new JPanel());
+        //dashboardPanel.add(new JPanel());
+        //dashboardPanel.add(new JPanel());
         
         mainPanel.add(dashboardPanel, BorderLayout.CENTER);
         

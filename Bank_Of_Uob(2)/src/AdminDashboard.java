@@ -26,6 +26,7 @@ public class AdminDashboard extends JFrame {
         // Dashboard buttons
         JPanel dashboardPanel = new JPanel(new GridLayout(2, 2, 20, 20));
         dashboardPanel.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50));
+        dashboardPanel.setBackground(new Color(20,27,50));
         
         String[] buttons = {"View All Users", "Remove Users", "View Transactions", "Log Out"};
         
