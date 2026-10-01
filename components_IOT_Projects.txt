@@ -1,9 +1,16 @@
+https://youtu.be/guxVMYMq9hc?si=_klY6xczPEpbY-hU
 components:
-
+===============================
+💡 Project components:
+ESP32 Devkit V1 https://s.click.aliexpress.com/e/_c3g...
+Soil sensor https://s.click.aliexpress.com/e/_c2I...
+Relay module https://s.click.aliexpress.com/e/_c3O...
+Breadboard & Jumper Wires https://s.click.aliexpress.com/e/_c3u...
+=================================
 1.Arduino uno
 2.Soil Moisture Sensor
 3.5v Relay Module
 4.5V mini water pump
 5.2 feet pipe
 6.Breadboard
-7.Jumper wire
+7.Jumper wire 
