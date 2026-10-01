@@ -1,0 +1,9 @@
+components:
+
+1.Arduino uno
+2.Soil Moisture Sensor
+3.5v Relay Module
+4.5V mini water pump
+5.2 feet pipe
+6.Breadboard
+7.Jumper wire
